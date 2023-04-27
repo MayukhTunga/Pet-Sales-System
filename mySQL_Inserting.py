@@ -36,6 +36,9 @@ britsCat2 = Kitty.Cat()
 britsCat3 = Kitty.Cat()
 availCat.britishShortHair(britsCat1, britsCat2, britsCat3)
 
+
+create.connection()
+
 mycon = sqltor.connect(
     host = 'localhost',
     user = 'root',
@@ -43,11 +46,9 @@ mycon = sqltor.connect(
 
 mycursor = mycon.cursor()
 
-mycursor.execute("USE SMP_Pet_Shop;")
-mycursor.execute("DROP TABLE IF EXISTS DOGS")
-mycursor.execute("DROP TABLE IF EXISTS CATS")
 
-create.connection()
+mycursor.execute("USE SMP_Pet_Shop;")
+
 #name, gender, dob, age, height, weight, breed, trained, affectionate
 insertDoggoTable = f"""INSERT INTO Dogs 
 VALUES(1, '{lab1.name}', '{lab1.gender}', '{lab1.dob}', {lab1.age}, {lab1.height}, {lab1.weight}, '{lab1.breed}', '{lab1.trained}', '{lab1.affectionate}'),
@@ -74,12 +75,10 @@ VALUES(1, '{siamCat1.name}', '{siamCat1.gender}', '{siamCat1.dob}', {siamCat1.ag
 """
 
 mycursor.execute(insertDoggoTable)
-mycon.commit()
-
 mycursor.execute(insertKittyTable)
 mycon.commit()
 
 # mycursor.execute("SELECT JSON_ARRAYAGG(json_object('name',name,'breed',breed)) FROM DOGS;")
-# data = mycursor.fetchall()
+# data = mycursor.fetchall(
 # print(type(data))
 # print(data)

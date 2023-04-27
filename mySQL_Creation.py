@@ -6,7 +6,7 @@ def connection():
         password = 'root')
 
     mycursor = mycon.cursor()
-
+    mycursor.execute("DROP DATABASE IF EXISTS SMP_PET_SHOP;")
     mycursor.execute("CREATE DATABASE IF NOT EXISTS SMP_Pet_Shop;")
     mycursor.execute("USE SMP_Pet_Shop;")
 
