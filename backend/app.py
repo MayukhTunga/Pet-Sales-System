@@ -29,6 +29,16 @@ def index():
     return render_template('index.html')
 @app.route('/index2', methods = ['GET','POST'])
 def index2():
+    if(request=='POST'):
+        mycon = sqltor.connect(
+        host = 'localhost',
+        user = 'root',
+        password = 'root')
+        mycursor = mycon.cursor()
+        mycursor.execute("USE SMP_Pet_Shop;")
+        mycursor.execute(f"SELECT * FROM DOGS WHERE breed = '{Labrador}';")
+        data = mycursor.fetchall()
+        return data
     return render_template('index2.html')
 
 
