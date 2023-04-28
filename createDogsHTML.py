@@ -11,7 +11,7 @@ mycursor = mycon.cursor()
 mycursor.execute("USE SMP_Pet_Shop;")
 
 def createHTMLDoggo(breed):
-    mycursor.execute(f"SELECT * FROM DOGS WHERE BREED = '{breed}';")
+    mycursor.execute(f"SELECT * FROM DOGS WHERE BREED LIKE '{breed}%';")
     data = mycursor.fetchall()
     col = ['Serial No.','Name','Gender','DOB','Age','Height','Weight','Breed','Trained?','Affectionate?']
     dat = []
@@ -22,7 +22,7 @@ def createHTMLDoggo(breed):
 
 
 def createHTMLKitty(breed):
-    mycursor.execute(f"SELECT * FROM CATS WHERE BREED = '{breed}';")
+    mycursor.execute(f"SELECT * FROM CATS WHERE BREED LIKE '{breed}%';")
     data = mycursor.fetchall()
     col = ['Serial No.','Name','Gender','DOB','Age','Height','Weight','Breed','Friendly','Responds To Name?']
     dat = []
@@ -31,8 +31,8 @@ def createHTMLKitty(breed):
     df = pd.DataFrame(dat,columns = col)
     df.to_html(f'frontend/{breed}.html',classes='table table-stripped')    
 
-doggoBreeds = ['Labrador', 'Husky', 'German Shepherd']
-kittyBreed = ['Siamese Cat', 'Persian Cat', 'British Short Hair']
+doggoBreeds = ['Labrador', 'Husky', 'German']
+kittyBreed = ['Siamese', 'Persian', 'British']
 
 for i in doggoBreeds:
     createHTMLDoggo(i)

@@ -6,12 +6,6 @@ import mysql.connector as sqltor
 import pandas as pd
 
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'SMP_PET_SHOP'
-
-mysql = MySQL(app)
 
 @app.route('/')
 def index():
@@ -21,9 +15,9 @@ def index():
 def index6():
     return render_template('/../frontend/Labrador.html')
 
-@app.route('/../frontend/Husky')
+@app.route('/Husky')
 def index1():
-    return render_template('Husky.html')
+    return render_template('/../frontend/Husky.html')
 
 @app.route('/German Shepherd')
 def index2():
