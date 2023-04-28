@@ -19,7 +19,7 @@
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a class="flex items-center">
-          <img src="petLogo.svg" class="h-8 mr-3" alt="Pet Shop" />
+          <img src="../petLogo.svg" class="h-8 mr-3" alt="Pet Shop" />
           <span
             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-blue-500"
             >Pet Shop</span
@@ -30,7 +30,7 @@
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            Buy
+            Adopt
           </button>
           <button
             data-collapse-toggle="navbar-sticky"
@@ -93,7 +93,7 @@
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2
-            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white p-3 mt-8"
           >
             Who is going to be your next companion?
           </h2>
@@ -103,7 +103,7 @@
         >
           <!-- Pricing Card -->
           <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-blue-500 rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
           >
             <h3 class="mb-4 text-2xl font-semibold">Dogs</h3>
             <img
@@ -111,33 +111,37 @@
               class="flex justify-center"
             />
             <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-5xl font-extrabold">"Woof Woof"</span>
+              <span class="mr-2 text-5xl font-extrabold">"woof woof"</span>
             </div>
             <!-- List -->
             <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
+              <li class="flex justify-center">
                 <a href="Labrador.html">
-                  <button id="labrador" name="lab">Labrador</button></a
+                  <button
+                    id="labrador"
+                    name="lab"
+                    class="rounded-full text-white bg-blue-700 p-3"
+                  >
+                    Labrador
+                  </button></a
                 >
               </li>
-              <li class="flex items-center space-x-3">
-                <a href="German.html">
+              <li class="flex justify-center">
+                <a
+                  href="German.html"
+                  class="rounded-full text-white bg-blue-700 p-3"
+                >
                   <button id="germanShepard">German Shepard</button></a
                 >
               </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
+              <li class="flex justify-center">
                 <a href="Husky.html"
-                  ><button id="husky" class="bg-black">Husky</button></a
+                  ><button id="husky" class="rounded-full text-white bg-blue-700 p-3">Husky</button></a
                 >
               </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
               </li>
             </ul>
+
             <a
               href="#"
               class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
@@ -146,9 +150,10 @@
           </div>
           <!-- Pricing Card -->
           <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-blue-500 rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white block mx-w-sm"
           >
             <h3 class="mb-4 text-2xl font-semibold">Cats</h3>
+
             <img
               src="https://i.pinimg.com/736x/01/6f/72/016f72c5812e1b8f71bdbf19d8c7558b.jpg"
               class="flex justify-center"
@@ -158,29 +163,20 @@
             </div>
             <!-- List -->
             <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
+              <li class="flex justify-center">
                 <a href="Persian.html"
-                  ><button id="persian">Persian Cat</button></a
+                  ><button id="persian" class="rounded-full text-white bg-blue-700 p-3">Persian Cat</button></a
                 >
               </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
+              <li class="flex justify-center">
                 <a href="British.html"
-                  ><button id="britishShortHair">British Short Hair</button></a
-                >
+                ><button id="britishShortHair" class="rounded-full text-white bg-blue-700 p-3">British Short Hair</button></a
+              >
               </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
+              <li class="flex justify-center">
                 <a href="Siamese.html"
-                  ><button id="siamese">Siamese Cat</button></a
+                  ><button id="siamese" class="rounded-full text-white bg-blue-700 p-3">Siamese Cat</button></a
                 >
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
               </li>
             </ul>
             <a
@@ -191,7 +187,7 @@
           </div>
           <!-- Pricing Card -->
           <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-blue-500 rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
           >
             <h3 class="mb-4 text-2xl font-semibold">Birds</h3>
             <img
@@ -199,25 +195,36 @@
               class="flex justify-center"
             />
             <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-5xl font-extrabold">"...?"</span>
+              <span class="mr-2 text-5xl font-extrabold">"Whistles"</span>
             </div>
             <!-- List -->
             <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
+              <li class="flex justify-center">
                 <!-- Icon -->
-                <button></button>
+                <button
+                  id="parrot"
+                  class="rounded-full text-white bg-blue-700 p-3"
+                >
+                  Parrot
+                </button>
               </li>
-              <li class="flex items-center space-x-3">
+              <li class="flex justify-center">
                 <!-- Icon -->
+                <button
+                  id="cockeitel"
+                  class="rounded-full text-white bg-blue-700 p-3"
+                >
+                  Cockeitel
+                </button>
               </li>
-              <li class="flex items-center space-x-3">
+              <li class="flex justify-center">
                 <!-- Icon -->
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
+                <button
+                  id="lovebirds"
+                  class="rounded-full text-white bg-blue-700 p-3"
+                >
+                  Love Birds
+                </button>
               </li>
             </ul>
             <a
@@ -229,5 +236,6 @@
         </div>
       </div>
     </section>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>
