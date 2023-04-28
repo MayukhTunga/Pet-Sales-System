@@ -14,10 +14,13 @@ app.config['MYSQL_DB'] = 'SMP_PET_SHOP'
 mysql = MySQL(app)
 
 
-@app.route('/', methods = ['GET','POST'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('../frontend/Labrador.html')
+def index():
+    return render_template('Labrador.html')
 
 if __name__ == "__main__":
     app.run("localhost", 6969)
